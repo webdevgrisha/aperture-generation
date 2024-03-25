@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt przesłony o zadanych parametrach</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1>Hole pattern on the plate depending on the transferred parameters</h1>
+        <form action="#" method="POST">
+          <div class="frequency">
+            <label for="frequency">Frequency in GHz:</label> <br />
+            <input
+              type="number"
+              id="frequency"
+              name="frequency"
+              placeholder="7.99"
+              value="7.99"
+              step="0.01"
+              min="1"
+              max="9.99"
+              required
+            />
+          </div>
+          <div class="min-gap">
+            <label>Minimum gap:</label><br />
+            <label for="gap">
+              <input type="radio" id="l/20" name="gap" value="l/20" checked />
+              &Lambda; / 20</label
+            >
+            <br />
+            <label for="gap">
+              <input type="radio" id="l/10" name="gap" value="l/10" />
+              &Lambda; / 10</label
+            >
+          </div>
+          <div class="min-frequency">
+            <label for="minFrequency">Minimum frequency in GHz:</label>
+            <input
+              type="number"
+              id="minFrequency"
+              name="minFrequency"
+              placeholder="9"
+              value="9"
+              min="1"
+              required
+            />
+          </div>
+          <div class="min-diameter">
+            <label for="minDiameter">Minimum diameter length in mm:</label>
+            <input
+              type="number"
+              id="minDiameter"
+              name="minDiameter"
+              placeholder="1"
+              value="1"
+              step="0.01"
+              min="1"
+              max="100"
+              required
+            />
+          </div>
+          <button type="submit">generate an aperture</button>
+        </form>
+        <section class="plate-square">
+          <h2>Square arrangement</h2>
+          <div class="plate square-shape"></div>
+          <div class="info">
+            <h3>Plate Info</h3>
+            <p>Circle on plate: <span class="circleOnPlate"></span></p>
+            <p>Diameter: <span class="diameter"></span> mm</p>
+            <p>Row gap: <span class="rowGap"></span> mm</p>
+            <p>Min frequency: <span class="minFrequency"></span> GHz</p>
+            <p>Total square: <span class="totalSquare"></span> mm^2</p>
+            <p>Percentage of surface occupied: <span class="surfaceOccupied"></span> %</p>
+          </div>
+        </section>
+        <section class="plate-triangle">
+          <h2>Equilateral triangle arrangement</h2>
+          <div class="plate equilateral-triangle-shape"></div>
+          <div class="info">
+            <h3>Plate Info</h3>
+            <p>Circle on plate: <span class="circleOnPlate"></span></p>
+            <p>Diameter: <span class="diameter"></span> mm</p>
+            <p>Row gap: <span class="rowGap"></span> mm</p>
+            <p>Min frequency: <span class="minFrequency"></span> GHz</p>
+            <p>Total square: <span class="totalSquare"></span> mm^2</p>
+            <p>Percentage of surface occupied: <span class="surfaceOccupied"></span> %</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

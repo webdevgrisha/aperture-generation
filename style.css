@@ -1,0 +1,174 @@
+/* reset css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    font-family: 'Space Mono', monospace;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 350px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+form .min-gap {
+    width: 100%;
+}
+
+form .min-gap input,
+label {
+    display: inline-block;
+}
+
+form .min-gap,
+label {
+    margin-bottom: 10px;
+}
+
+form button {
+    margin: auto;
+    /* justify-self: center;
+    align-self: center; */
+    transition: 0.4s all;
+}
+
+main .plate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: bisque;
+}
+
+main .plate .hole {
+    display: flex;
+    border-radius: 50px;
+    background-color: black;
+}
+
+main .plate h3 {
+    text-align: center;
+    color: rgba(211, 18, 18, 0.797);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+section h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.info h3 {
+    justify-self: center;
+    font-size: 22px;
+}
+
+.info span {
+    font-style: italic;
+}
